@@ -45,7 +45,7 @@ nommage de ActiveRecord.
 Crééz les classes ActiveRecord pour chacune de ces entités avec les **associations**.
 
 
-Exigence 2
+:wrench: Exigence 2
 ----------
 
 Afin de prouver que vos classes et leurs associations fonctionnent, vous allez:
