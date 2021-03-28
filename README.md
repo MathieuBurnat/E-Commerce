@@ -36,7 +36,7 @@ rake db:migrate
 ```
 Puis en observant les données apparaître dans la DB.
 
-:wrench: Exigence 1
+:heavy_check_mark: Exigence 1
 ----------
 
 Créez la BD selon les spécifications précédentes en ajoutant aussi les clés étrangères selon la convention de
