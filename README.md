@@ -27,7 +27,7 @@ order_items
 :   quantity
 :   item_price
 
-Exigence 0
+:heavy_check_mark: Exigence 0   
 ----------
 La base de donnée est correctement configurée. 
 Il est possible de le vérifier en effectuant un test avec la commande :
