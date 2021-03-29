@@ -3,7 +3,5 @@ class Product < ActiveRecord::Base
     has_many :orders, through: :order_items
 
     scope :cheap, -> { where("products.price <= ?", 20) }
-
-
 end
   
