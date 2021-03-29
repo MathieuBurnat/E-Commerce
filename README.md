@@ -53,7 +53,7 @@ Afin de prouver que vos classes et leurs associations fonctionnent, vous allez:
   - Créez ...
 
 
-Exigence 3
+:wrench: Exigence 3
 ----------
 
 Ajoutez les *scopes* suivants:
