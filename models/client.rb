@@ -8,6 +8,5 @@ class Client < ActiveRecord::Base
     validates :lastname, length: {minimum: 3, maximum: 20}
 
     scope :amount, -> { count("*") }
-
 end
   
