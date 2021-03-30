@@ -1,10 +1,16 @@
 require_relative 'connection'
 require_relative 'models'
 
-puts "---  [#{Client.amount.to_s}] Render Clients ---"
-clients = Client.all
+puts "---  [#{Individual.amount.to_s}] Render Individuals ---"
+clients = Individual.all
 clients.each do |client|
     puts client.lastname + " : " + client.firstname
+end
+
+puts "---  [#{Entreprise.amount.to_s}] Render Entreprises ---"
+entreprises = Entreprise.all
+entreprises.each do |entreprise|
+    puts entreprise.company_name
 end
 
 puts "--- Cheapest products ---"

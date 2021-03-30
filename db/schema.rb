@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_28_093044) do
+ActiveRecord::Schema.define(version: 2021_03_30_194936) do
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2021_03_28_093044) do
   end
 
   create_table "clients", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "firstname", limit: 60
-    t.string "lastname", limit: 60
+    t.string "firstname", limit: 20
+    t.string "lastname", limit: 20
+    t.string "company_name", limit: 20
+    t.string "type"
   end
 
   create_table "order_items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
