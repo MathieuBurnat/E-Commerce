@@ -79,7 +79,7 @@ de validations:
   - Une commande ne peut être passée que si:
     - il y a au moins un produit commandé
 
-Exigence 5
+:wrench: Exigence 5
 ----------
 
 Lors d'une commande, le but est d'afficher le prix total de la commande.
