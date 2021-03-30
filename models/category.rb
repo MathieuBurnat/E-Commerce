@@ -3,4 +3,3 @@ class Category < ActiveRecord::Base
 
     validates :name, length: {minimum: 2, maximum: 50}
 end
-  

@@ -1,7 +1,7 @@
 require_relative 'connection'
 require_relative 'models'
 
-puts "--- Render Clients ---"
+puts "---  [#{Client.amount.to_s}] Render Clients ---"
 clients = Client.all
 clients.each do |client|
     puts client.lastname + " : " + client.firstname
