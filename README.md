@@ -53,7 +53,7 @@ Afin de prouver que vos classes et leurs associations fonctionnent, vous allez:
   - Créez ...
 
 
-:wrench: Exigence 3
+:cloud: Exigence 3
 ----------
 
 Ajoutez les *scopes* suivants:
