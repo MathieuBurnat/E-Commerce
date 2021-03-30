@@ -1,11 +1,13 @@
 require_relative '../models'
 
 # Create clients
-mathieu = Client.create(firstname: "Mathieu", lastname: "BlackCat")
+mathieu = Individual.create(firstname: "Mathieu", lastname: "BlackCat")
 
-Client.create(firstname: "Jerome", lastname: "Hedgedoc")
-Client.create(firstname: "Henri", lastname: "Wolf")
-Client.create(firstname: "Simon", lastname: "Bunny")
+Individual.create(firstname: "Jerome", lastname: "Hedgedoc")
+Individual.create(firstname: "Henri", lastname: "Wolf")
+Individual.create(firstname: "Simon", lastname: "Bunny")
+Entreprise.create(company_name: "RubbyShop")
+Entreprise.create(company_name: "EatMe")
 
 # Create categories (with another method)
 
