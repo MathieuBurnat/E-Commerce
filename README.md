@@ -69,7 +69,7 @@ Pour ceci, ajouter du code là où il vous semble le mieux placé.
 
 De plus affichez les produits commandé par quantité de plus de 50 pièces.
 
-:wrench: Exigence 4
+:heavy_check_mark: Exigence 4
 ----------
 
 La cohérence des données dans la BD est importante, vous allez donc ajouter des règles
