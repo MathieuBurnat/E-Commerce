@@ -91,7 +91,7 @@ le prix du produit lors de la commande.
 Le but est d'ajouter le code pour ces fonctionnalités aux bons endroits!
 
 
-Exigence 6
+:wrench: Exigence 6
 ----------
 
 Les clients sont de deux types différents:
