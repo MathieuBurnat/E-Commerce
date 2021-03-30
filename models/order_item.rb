@@ -7,5 +7,10 @@ class OrderItem < ActiveRecord::Base
 
     # Set a default value : In this case it'll be 100
     scope :bulk, ->(size = 100) { where('quantity >= ?', size) }
+
+    # Define the price of the order_item
+    def price
+        quantity * item_price
+    end
 end
   
