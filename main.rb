@@ -20,9 +20,14 @@ orderItems.each do |orderItem|
     puts orderItem.product.name + " : " + orderItem.quantity.to_s + " (Ordered by " + orderItem.order.client.firstname + " " + orderItem.order.client.lastname + ")"
 end 
 
+
 # Version avec détails (Exigence 3 -> last line)
 # client = Client.first
 # puts "### Produits pas cher commandé par #{client}"
 # client.ordered_products.cheap.each do |product|
 #   puts "  #{product.name} trouvé dans #{product.orders.count} commandes"
 # end
+
+client = Client.where('id = ?', 1).first
+puts "--- Total of the last order of the client " + client.firstname + " " + client.lastname + " ---"
+puts client.orders.last.total_price.to_s
