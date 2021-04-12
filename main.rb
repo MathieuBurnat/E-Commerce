@@ -34,6 +34,16 @@ end
 #   puts "  #{product.name} trouvé dans #{product.orders.count} commandes"
 # end
 
-client = Client.where('id = ?', 1).first
+# client = Client.where('id = ?', 1).first
+client = Client.find(1)
 puts "--- Total of the last order of the client " + client.firstname + " " + client.lastname + " ---"
 puts client.orders.last.total_price.to_s
+
+suppliers = Supplier.all()
+puts "---  [#{Supplier.amount.to_s}] Render categories to Suppliers ---"
+suppliers.each do |supplier|
+    puts "#{supplier.name} has : " 
+    supplier.categories.each do |cat|
+        puts "- #{cat.name}" 
+    end
+end

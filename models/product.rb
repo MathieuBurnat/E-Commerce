@@ -1,8 +1,10 @@
 class Product < ActiveRecord::Base
     belongs_to :category
+    belongs_to :supplier
+
     has_many :orders, through: :order_items
 
-    validates :category, presence: true
+    validates :category, :supplier, presence: true
     validates :name, length: {minimum: 2, maximum: 50}
     validates :price, numericality: {greater_than: 0}
 

@@ -102,7 +102,7 @@ Les clients sont de deux types différents:
 Adaptez votre code pour prendre en compte ce changement.
 
 
-Exigence 7
+:heavy_check_mark: Exigence 7
 ----------
 
 Notre plateforme évolue vers un système d'échange B2B, il faut donc ajouter
