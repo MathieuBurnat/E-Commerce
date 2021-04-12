@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
 
     has_many :orders, through: :order_items
 
-    validates :category, presence: true
+    validates :category, :supplier, presence: true
     validates :name, length: {minimum: 2, maximum: 50}
     validates :price, numericality: {greater_than: 0}
 
