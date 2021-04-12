@@ -38,3 +38,10 @@ end
 client = Client.find(1)
 puts "--- Total of the last order of the client " + client.firstname + " " + client.lastname + " ---"
 puts client.orders.last.total_price.to_s
+
+suppliers = Supplier.all()
+puts "---  [#{Supplier.amount.to_s}] Render Suppliers ---"
+suppliers.each do |supplier|
+    puts "#{supplier.name} has : " 
+    p supplier.categories
+end
