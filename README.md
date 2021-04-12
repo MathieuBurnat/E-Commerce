@@ -112,7 +112,7 @@ Chaque produit est lié à un fournisseur.
 Il sera possible de lister les catégories couvertes par chaque fournisseur.
 
 
-Exigence 8
+🛠️Exigence 8
 ----------
 
 Le système devient *social*, nos utilisateurs veulent donc pouvoir poster
