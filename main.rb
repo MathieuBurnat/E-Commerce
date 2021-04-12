@@ -34,6 +34,7 @@ end
 #   puts "  #{product.name} trouvé dans #{product.orders.count} commandes"
 # end
 
-client = Client.where('id = ?', 1).first
+# client = Client.where('id = ?', 1).first
+client = Client.find(1)
 puts "--- Total of the last order of the client " + client.firstname + " " + client.lastname + " ---"
 puts client.orders.last.total_price.to_s
