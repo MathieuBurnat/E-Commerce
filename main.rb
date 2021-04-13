@@ -46,4 +46,5 @@ suppliers.each do |supplier|
     supplier.categories.each do |cat|
         puts "- #{cat.name}" 
     end
+    puts "Score : #{Comment.supplier_score(supplier)} | 10" 
 end
