@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_111412) do
+ActiveRecord::Schema.define(version: 2021_04_13_102852) do
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 2021_04_12_111412) do
     t.string "lastname", limit: 20
     t.string "company_name", limit: 20
     t.string "type"
+  end
+
+  create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "comment", limit: 3000
+    t.integer "mark"
+    t.bigint "client_id"
+    t.bigint "supplier_id"
+    t.bigint "product_id"
+    t.index ["client_id"], name: "index_comments_on_client_id"
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["supplier_id"], name: "index_comments_on_supplier_id"
   end
 
   create_table "order_items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -55,6 +66,9 @@ ActiveRecord::Schema.define(version: 2021_04_12_111412) do
     t.string "name", limit: 50, null: false
   end
 
+  add_foreign_key "comments", "clients"
+  add_foreign_key "comments", "products"
+  add_foreign_key "comments", "suppliers"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "clients"
