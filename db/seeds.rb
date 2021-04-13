@@ -5,7 +5,6 @@ mathieu = Individual.create(firstname: "Mathieu", lastname: "BlackCat")
 
 Individual.create(firstname: "Jerome", lastname: "Hedgedoc")
 Individual.create(firstname: "Henri", lastname: "Wolf")
-Individual.create(firstname: "Simon", lastname: "Bunny")
 Entreprise.create(company_name: "RubbyShop")
 Entreprise.create(company_name: "EatMe")
 nastlet = Supplier.create(name: "Nastlet")
@@ -22,7 +21,7 @@ desktop = Category.create(name: "Desktop", description: "Funny goodies :D")
 deco = Category.create(name: "Decoration", description: "Upgrade your home with beautiful decoration")
 
 # Create products (with object's associations)
-Product.create(name: "RedKeyboard", price: 98.20, description: "Look at these beautiful keys", category: it, supplier: caoutchouka)
+keyboard = Product.create(name: "RedKeyboard", price: 98.20, description: "Look at these beautiful keys", category: it, supplier: caoutchouka)
 Product.create(name: "Start", price: 25.90, description: "Look at it it sparkles !", category: deco, supplier: nastlet)
 Product.create(name: "Josef", price: 5, description: "The Josef's poster. A2", category: deco, supplier: caoutchouka)
 
@@ -35,3 +34,6 @@ order = mathieu.orders.new
 order.order_items.new(product: eraser, quantity: 24, item_price: eraser.price)
 order.order_items.new(product: pencil, quantity: 1, item_price: pencil.price)
 order.save
+
+Comment.create(client: mathieu, comment: "Was fast and very gentle !", mark: 9, supplier: nastlet)
+Comment.create(client: mathieu, comment: "Did i like this product ? Meeeeh", mark: 1, product: keyboard)
