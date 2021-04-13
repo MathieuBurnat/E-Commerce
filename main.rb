@@ -40,10 +40,11 @@ puts "--- Total of the last order of the client " + client.firstname + " " + cli
 puts client.orders.last.total_price.to_s
 
 suppliers = Supplier.all()
-puts "---  [#{Supplier.amount.to_s}] Render categories to Suppliers ---"
+puts "---  [#{Supplier.amount.to_s}] Suppliers ---"
 suppliers.each do |supplier|
     puts "#{supplier.name} has : " 
     supplier.categories.each do |cat|
         puts "- #{cat.name}" 
     end
+    puts "Score : #{Comment.supplier_score(supplier)} | 10" 
 end
