@@ -19,8 +19,8 @@ products.each do |product|
     puts product.name + " : " + product.price.to_s
 end
 
-quantity = 20
-puts "--- Ordered items with an amount of " + quantity.to_s + " at less ---"
+quantity = 10
+puts "--- Ordered items with an amount of " + quantity.to_s + " or more ---"
 orderItems = OrderItem.bulk(quantity)
 orderItems.each do |orderItem|
     puts orderItem.product.name + " : " + orderItem.quantity.to_s + " (Ordered by " + orderItem.order.client.firstname + " " + orderItem.order.client.lastname + ")"
@@ -28,11 +28,13 @@ end
 
 
 # Version avec détails (Exigence 3 -> last line)
-# client = Client.first
-# puts "### Produits pas cher commandé par #{client}"
-# client.ordered_products.cheap.each do |product|
-#   puts "  #{product.name} trouvé dans #{product.orders.count} commandes"
-# end
+client = Client.find(1)
+puts "Cheapest products commanded by  #{client.firstname} #{client.lastname}"
+products = client.cheapest_ordered_items
+
+products.each do |product|
+    p product
+end
 
 # client = Client.where('id = ?', 1).first
 client = Client.find(1)
