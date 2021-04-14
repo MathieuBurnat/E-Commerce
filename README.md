@@ -53,20 +53,22 @@ Afin de prouver que vos classes et leurs associations fonctionnent, vous allez:
   - Créez ...
 
 
- 🛠️ Exigence 3
+:mag:  Exigence 3 
 ----------
-
+**[ A ]**
 Ajoutez les *scopes* suivants:
-
   - Sur `Product`: `cheap` qui permet de sortir les produits dont le prix est de -.20 ou moins
   - Sur `OrderItem`: `bulk` qui permet de sortir les items qui ont été commandé avec une quantity
     de 100 pièces ou plus. Ce scope acceptera un paramètre qui est le seuil du nombre de pièces.
     Comme indiqué par défaut c'est 100 pièces.
 
+**[ B ]**
 Ensuite, faites en sorte que le programme principal affiche pour un client donné, les produits
 pas cher qu'il a commandé.
 Pour ceci, ajouter du code là où il vous semble le mieux placé.
+*Note : Cette partie fonctionne, cependant elle a besoin d'être optimisée*
 
+**[ C ]**
 De plus affichez les produits commandé par quantité de plus de 50 pièces.
 
 :heavy_check_mark: Exigence 4
@@ -124,7 +126,7 @@ des commentaires sur:
 Ajoutez les tables, les modèles et les associations.
 
 
-:mag: Exigence 9
+:crescent_moon:  Exigence 9
 ----------
 
 Le système envoie un mail lorsque le nombre de pièces de chaque produit en stock arrive en dessous de 5 pièces.
