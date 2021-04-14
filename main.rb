@@ -28,7 +28,7 @@ end
 
 
 # Version avec détails (Exigence 3 -> last line)
-client = Client.find(2)
+client = Client.find(1)
 puts "Cheapest products commanded by  #{client.firstname} #{client.lastname}"
 products = client.cheapest_ordered_items
 

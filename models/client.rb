@@ -12,6 +12,8 @@ class Client < ActiveRecord::Base
     def cheapest_ordered_items
         # Get all ordered_items of the client
         products = []
+        
+
         datas = Order.select("*").joins("order_items").where("client_id = #{self.id}")
 
         # Get product from ordred_item
