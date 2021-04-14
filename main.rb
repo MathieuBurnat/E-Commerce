@@ -28,11 +28,13 @@ end
 
 
 # Version avec détails (Exigence 3 -> last line)
-# client = Client.first
-# puts "### Produits pas cher commandé par #{client}"
-# client.ordered_products.cheap.each do |product|
-#   puts "  #{product.name} trouvé dans #{product.orders.count} commandes"
-# end
+client = Client.find(2)
+puts "Cheapest products commanded by  #{client.firstname} #{client.lastname}"
+products = client.cheapest_ordered_items
+
+products.each do |product|
+    p product
+end
 
 # client = Client.where('id = ?', 1).first
 client = Client.find(1)
