@@ -124,8 +124,21 @@ des commentaires sur:
 Ajoutez les tables, les modèles et les associations.
 
 
-Exigence 9
+:mag: Exigence 9
 ----------
 
 Le système envoie un mail lorsque le nombre de pièces de chaque produit en stock arrive en dessous de 5 pièces.
+
+---
+
+ 🛠️ Exigence A
+----------
+
+
+Maintenant que le système complet de gestion est en place, nous allons ajouter des opérations de traitement.
+
+1. Afficher la commande la plus cher
+2. Afficher les catégories qui n'ont jamais été commandées
+3. Supprimer les clients n'ayant fait aucune commande
+4. Déterminer s'il y a des commandes ou non entre deux dates données
 
