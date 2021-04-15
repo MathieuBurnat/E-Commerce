@@ -23,6 +23,7 @@ Category.new(name: "Sport", description: "To all berserkers in the soul...").sav
 it = Category.create(name: "IT", description: "Techno-Shop")
 desktop = Category.create(name: "Desktop", description: "Funny goodies :D")
 deco = Category.create(name: "Decoration", description: "Upgrade your home with beautiful decoration")
+clothes = Category.create(name: "Clothes", description: "Bring the fashion near you !" )
 
 # ------ Create products (with object's associations) ------
 keyboard = Product.create(name: "RedKeyboard", price: 98.20, description: "Look at these beautiful keys", category: it, supplier: caoutchouka)
@@ -31,6 +32,8 @@ josef = Product.create(name: "Josef", price: 5, description: "The Josef's poster
 
 pencil = Product.create(name: "Pencil", price: 5.10, description: "We love it.", category: desktop, supplier: nastlet)
 eraser = Product.create(name: "Eraser", price: 7.20, description: "THE Eraser.", category: desktop, supplier: nastlet)
+
+Product.create(name: "Bob", price: 150, description: "#1", category: clothes, supplier: nastlet)
 
 # ------ Create orders ------
 # Create the object with .new to update it dynamically and save it at the end

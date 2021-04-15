@@ -58,4 +58,8 @@ puts "Created at #{order_most_expensive.created_at}"
 puts "Order's price : #{order_most_expensive.total_price}"
 
 puts "H.2 --- Categories not interested by clients ---"
-p Category.not_commanded
+categories = Category.not_commanded
+
+categories.each do |category|
+    puts "Name : #{category.name}, Description : #{category.description}"
+end
