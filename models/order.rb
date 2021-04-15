@@ -7,7 +7,22 @@ class Order < ActiveRecord::Base
     
     #Cascading validation
     validates_associated :order_items
+
+    # All orders be simply get with the key word "all"
+    # After that, it became possible to sort orders by price
+    def self.order_by_price
+        all.sort_by {|order| order.total_price}
+    end
     
+    def self.most_expensive
+        order_by_price.last
+    end
+
+    # Also possible
+    # def self.most_expensive
+    #     all.max_by(&:price)
+    # end
+
     def total_price
         #order_items.sum(&:price)
         #Similar to :

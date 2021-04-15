@@ -40,6 +40,11 @@ order.order_items.new(product: eraser, quantity: 24, item_price: eraser.price)
 order.order_items.new(product: pencil, quantity: 1, item_price: pencil.price)
 order.save
 
+order = mathieu.orders.new
+order.order_items.new(product: keyboard, quantity: 3, item_price: keyboard.price)
+order.order_items.new(product: star, quantity: 105, item_price: star.price)
+order.save
+
 order = simon.orders.new
 order.order_items.new(product: star, quantity: 101, item_price: star.price)
 order.order_items.new(product: josef, quantity: 2, item_price: josef.price)

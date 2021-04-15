@@ -39,7 +39,7 @@ end
 # client = Client.where('id = ?', 1).first
 client = Client.find(1)
 puts "F --- Total of the last client's order " + client.firstname + " " + client.lastname + " ---"
-puts client.orders.last.total_price.to_s
+puts client.orders.first.total_price.to_s
 
 suppliers = Supplier.all()
 puts "G ---  [#{Supplier.amount.to_s}] Suppliers ---"
@@ -50,3 +50,6 @@ suppliers.each do |supplier|
     end
     puts "Score : #{Comment.supplier_score(supplier)} | 10" 
 end
+
+puts "H --- Display the most expansive order ---"
+p Order.most_expensive
