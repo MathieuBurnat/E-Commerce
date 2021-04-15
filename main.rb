@@ -51,5 +51,11 @@ suppliers.each do |supplier|
     puts "Score : #{Comment.supplier_score(supplier)} | 10" 
 end
 
-puts "H --- Display the most expansive order ---"
-p Order.most_expensive
+order_most_expensive = Order.most_expensive
+puts "H.1 --- The most expansive order ---"
+puts "Ordred by #{order_most_expensive.client.firstname} #{order_most_expensive.client.lastname}"
+puts "Created at #{order_most_expensive.created_at}"
+puts "Order's price : #{order_most_expensive.total_price}"
+
+puts "H.2 --- Categories not interested by clients ---"
+p Category.not_commanded
