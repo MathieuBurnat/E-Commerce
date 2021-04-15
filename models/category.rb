@@ -4,11 +4,19 @@ class Category < ActiveRecord::Base
 
     validates :name, length: {minimum: 2, maximum: 50}
 
-    def self.order_by_price
-        all.sort_by {|order| order.total_price}
+    def self.not_commanded
+        all.find_all {|category| category.products.all? {|product| product.order_items.empty? } }
     end
     
-    def self.most_expensive
-        order_by_price.last
-    end
+    # ### Ex2-suite-2-variante-b
+    # def self.never_ordered_b
+    # # needs   has_many :order_items, through: :products
+    # all.find_all {|category| category.order_items.empty? }
+    # end
+
+    # ### Ex2-suite-2-variante-c
+    # def self.never_ordered_c
+    # # needs has_many :orders, through: :products
+    # where.not(id: joins(:orders))
+    # end
 end
