@@ -8,6 +8,10 @@ class Order < ActiveRecord::Base
     #Cascading validation
     validates_associated :order_items
 
+    def self.created_between(range_start, range_end)
+        all.find_all {|order| order.created_at.between?(range_start, range_end) }
+    end
+
     # All orders be simply get with the key word "all"
     # After that, it became possible to sort orders by price
     def self.order_by_price
