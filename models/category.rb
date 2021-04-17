@@ -4,6 +4,10 @@ class Category < ActiveRecord::Base
 
     validates :name, length: {minimum: 2, maximum: 50}
 
+    def self.commanded
+        all.find_all {|category| category.products.all? {|product| product.order_items.exists? } }
+    end
+
     def self.not_commanded
         all.find_all {|category| category.products.all? {|product| product.order_items.empty? } }
     end

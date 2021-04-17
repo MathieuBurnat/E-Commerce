@@ -64,6 +64,13 @@ categories.each do |category|
     puts "Name : #{category.name}, Description : #{category.description}"
 end
 
+puts "I.1 --- Categories interested by clients ---"
+categories = Category.commanded
+
+categories.each do |category|
+    puts "Name : #{category.name}, Description : #{category.description}"
+end
+
 # You need to uncomment #client.destroy to make H.3 works properly 
 puts "H.3 --- Destroy all clients that done any orders ---"
 puts "Destroy Individuals : "

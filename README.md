@@ -139,7 +139,7 @@ Maintenant que le système complet de gestion est en place, nous allons ajouter 
 3. Supprimer les clients n'ayant fait aucune commande
 4. Déterminer s'il y a des commandes ou non entre deux dates données
 
-Exigence B 
+:wrench: Exigence B 
 ----------
 **Funny-Bonus :cake:**
 1. Afficher les catégories qui ont déjà été commandées
