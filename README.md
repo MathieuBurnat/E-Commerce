@@ -53,7 +53,7 @@ Afin de prouver que vos classes et leurs associations fonctionnent, vous allez:
   - Créez ...
 
 
-🛠️  Exigence 3 
+:heavy_check_mark:  Exigence 3 
 ----------
 Ajoutez les *scopes* suivants:
   - Sur `Product`: `cheap` qui permet de sortir les produits dont le prix est de -.20 ou moins
