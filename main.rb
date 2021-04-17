@@ -36,55 +36,55 @@ products.each do |product|
     puts product.name + " : " + product.price.to_s
 end
 
-## client = Client.where('id = ?', 1).first
-#client = Client.find(1)
-#puts "F --- Total of the last client's order " + client.firstname + " " + client.lastname + " ---"
-#puts client.orders.first.total_price.to_s
-#
-#suppliers = Supplier.all()
-#puts "G ---  [#{Supplier.amount.to_s}] Suppliers ---"
-#suppliers.each do |supplier|
-#    puts "#{supplier.name} has : " 
-#    supplier.categories.each do |cat|
-#        puts "- #{cat.name}" 
-#    end
-#    puts "Score : #{Comment.supplier_score(supplier)} | 10" 
-#end
-#
-#order_most_expensive = Order.most_expensive
-#puts "H.1 --- The most expansive order ---"
-#puts "Ordred by #{order_most_expensive.client.firstname} #{order_most_expensive.client.lastname}"
-#puts "Created at #{order_most_expensive.created_at}"
-#puts "Order's price : #{order_most_expensive.total_price}"
-#
-#puts "H.2 --- Categories not interested by clients ---"
-#categories = Category.not_commanded
-#
-#categories.each do |category|
-#    puts "Name : #{category.name}, Description : #{category.description}"
-#end
-#
-## You need to uncomment #client.destroy to make H.3 works properly 
-#puts "H.3 --- Destroy all clients that done any orders ---"
-#puts "Destroy Individuals : "
-#clients = Individual.done_any_order
-#clients.each do |client|
-#        puts "--> #{client.lastname} #{client.firstname}"
-#        #client.destroy 
-#end
-#
-#puts "Destroy Entreprises : "
-#clients = Entreprise.done_any_order
-#clients.each do |client|
-#        puts "--> #{client.company_name}"
-#        #client.destroy
-#end
-#
-#range_start = DateTime.parse('2021/03/15')
-#range_end   = DateTime.parse('2022/05/30')
-#
-#puts "H.4 --- Orders  created between #{range_start} and #{range_end} ---"
-#orders = Order.created_between(range_start, range_end)
-#orders.each do |order|
-#    p order
-#end
+# client = Client.where('id = ?', 1).first
+client = Client.find(1)
+puts "F --- Total of the last client's order " + client.firstname + " " + client.lastname + " ---"
+puts client.orders.first.total_price.to_s
+
+suppliers = Supplier.all()
+puts "G ---  [#{Supplier.amount.to_s}] Suppliers ---"
+suppliers.each do |supplier|
+    puts "#{supplier.name} has : " 
+    supplier.categories.each do |cat|
+        puts "- #{cat.name}" 
+    end
+    puts "Score : #{Comment.supplier_score(supplier)} | 10" 
+end
+
+order_most_expensive = Order.most_expensive
+puts "H.1 --- The most expansive order ---"
+puts "Ordred by #{order_most_expensive.client.firstname} #{order_most_expensive.client.lastname}"
+puts "Created at #{order_most_expensive.created_at}"
+puts "Order's price : #{order_most_expensive.total_price}"
+
+puts "H.2 --- Categories not interested by clients ---"
+categories = Category.not_commanded
+
+categories.each do |category|
+    puts "Name : #{category.name}, Description : #{category.description}"
+end
+
+# You need to uncomment #client.destroy to make H.3 works properly 
+puts "H.3 --- Destroy all clients that done any orders ---"
+puts "Destroy Individuals : "
+clients = Individual.done_any_order
+clients.each do |client|
+        puts "--> #{client.lastname} #{client.firstname}"
+        #client.destroy 
+end
+
+puts "Destroy Entreprises : "
+clients = Entreprise.done_any_order
+clients.each do |client|
+        puts "--> #{client.company_name}"
+        #client.destroy
+end
+
+range_start = DateTime.parse('2021/03/15')
+range_end   = DateTime.parse('2022/05/30')
+
+puts "H.4 --- Orders  created between #{range_start} and #{range_end} ---"
+orders = Order.created_between(range_start, range_end)
+orders.each do |order|
+    p order
+end
