@@ -80,4 +80,16 @@ clients.each do |client|
         #client.destroy
 end
 
-puts "H.4"
+range_start = DateTime.parse('2018/04/15')
+range_end   = DateTime.parse('2018/05/30')
+test1 = DateTime.parse('2018/04/17')
+test2 = DateTime.parse('2019/05/30')
+test3 = DateTime.parse('2018/04/29')
+
+puts "H.4 --- Orders  created between #{range_start} and #{range_end} ---"
+puts test1.between?(range_start, range_end).to_s
+puts test2.between?(range_start, range_end).to_s
+puts test3.between?(range_start, range_end).to_s
+puts range_start.between?(range_start, range_end).to_s
+puts range_end.between?(range_start, range_end).to_s
+      
