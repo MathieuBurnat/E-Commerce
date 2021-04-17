@@ -6,13 +6,16 @@ class Client < ActiveRecord::Base
 
     scope :amount, -> { count("*") }
 
+    def self.done_any_order
+        all.find_all {|client| client.orders.empty? }
+    end
+
     # * Notes
     # In this test i tried to implement two inner join with the method .joins.
     # Unfortunately, it doesn't works properly so I had to <rethink> about my queries and adapt the code..
     def cheapest_ordered_items
         # Get all ordered_items of the client
         products = []
-        
 
         datas = Order.select("*").joins("order_items").where("client_id = #{self.id}")
 
