@@ -30,10 +30,10 @@ end
 # Version avec détails (Exigence 3 -> last line)
 client = Client.find(1)
 puts "E --- Cheapest products commanded by  #{client.firstname} #{client.lastname} ---"
-products = client.cheapest_ordered_items
 
+products = client.cheapest_products_ordered
 products.each do |product|
-    p product
+    puts product.name + " : " + product.price.to_s
 end
 
 # client = Client.where('id = ?', 1).first
