@@ -11,5 +11,6 @@ class Product < ActiveRecord::Base
     validates :price, numericality: {greater_than: 0}
 
     scope :cheap, -> { where("products.price <= ?", 20) }
+
 end
   
