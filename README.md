@@ -133,7 +133,7 @@ Le système envoie un mail lorsque le nombre de pièces de chaque produit en sto
 
 ---
 
- 🛠️ Exigence A
+ :heavy_check_mark: Exigence A
 ----------
 
 
