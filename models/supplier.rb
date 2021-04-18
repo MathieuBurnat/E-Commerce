@@ -9,5 +9,10 @@ class Supplier < ActiveRecord::Base
     validates :name, length: {minimum: 3, maximum: 20}
 
     scope :amount, -> { count("*") }
+
+    def get_score
+        marks = self.comments.pluck("mark")
+        return marks.sum(0.0) / marks.size
+    end
 end
   
