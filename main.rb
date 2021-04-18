@@ -31,7 +31,7 @@ end
 client = Client.find(1)
 puts "E --- Cheapest products commanded by  #{client.firstname} #{client.lastname} ---"
 
-products = client.cheapest_products_ordered
+products = client.ordered_products.cheap
 products.each do |product|
     puts product.name + " : " + product.price.to_s
 end

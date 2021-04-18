@@ -9,9 +9,5 @@ class Client < ActiveRecord::Base
     def self.done_any_order
         all.find_all {|client| client.orders.empty? }
     end
-
-    def cheapest_products_ordered
-        self.ordered_products.cheap
-    end
 end
   
