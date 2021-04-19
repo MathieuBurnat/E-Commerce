@@ -18,7 +18,7 @@ class OrderItem < ActiveRecord::Base
     protected def set_price
         # Set the price the default value if no other values are set
         # This option could be interesting if a price's discout exists
-        self.price ||= product.price
+        self.item_price ||= product.price
         
         # Method "unfolded"
         # self.item_price = self.item_price || product.price
